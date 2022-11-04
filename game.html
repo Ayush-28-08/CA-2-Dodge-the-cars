@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodge the cars</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gametime">
+        Time:<span id="timer">0</span>
+    </div>
+   
+    
+    <div id="game">
+        <div id="bluecar"><img src="./assets/blue.png" alt=""></div>
+        <div id="tank"> <img src="./assets/pixel-military-tank-top-video-game-59174863-removebg-preview.png" alt=""></div>
+        <div id="racecar"><img src="./assets/newmycar.png" alt=""></div>
+        <div id="box1"></div>
+        <div id="box2"></div>
+    </div>
+    <div id="result">
+        
+        <h1 id="savename">hi</h1>
+        <span id="phrases"></span>
+        <p id="score"></p>
+        <button id="btn" onclick="location.reload()">Restart</button>
+    </div>
+    
+    <audio id="jumpsound" src="./newjump.mp3"></audio>
+    <script src="./game.js"></script>
+  
+</body>
+</html>

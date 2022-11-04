@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+#index{
+    background: #33CCCC; /* Fallback */
+    animation: color 15s infinite linear;
+background-image: url('./assets/newbg.png');
+   overflow: hidden;
+}
+#gamename{
+    font-family: 'Fredoka One', cursive;
+    font-size: 40px;
+    color: rgb(52, 25, 25);
+    align-items: center;
+}
+#gametime{
+    font-family: 'Fredoka One', cursive;
+    font-size: 30px;
+}
+
+#box1{
+    border: solid black;
+    width: 130px;
+    height: 800px;
+    position: relative;
+    bottom: 300px;
+}
+#box2{
+    border: solid black;
+    width: 130px;
+    height: 800px;
+    position: relative;
+    bottom: 1104px;
+    left: 280px; ;
+
+}
+
+ 
+
+@keyframes playgame {
+    0% {
+        opacity: 0;
+        bottom: -100px
+    }
+    100% {
+        opacity: 1;
+        bottom: 400px;
+
+
+    }
+    } 
+@keyframes deeranim{
+
+    0%{
+        left: 630px;
+    }
+
+    100% {
+        left: 1580px;
+        display: none;
+    }
+}
+@keyframes flying {
+    0% {
+        left: -100px;
+    }
+
+    100% {
+        left: 1580px;
+    }
+}
+
+
+@keyframes zoomin {
+        0% {
+            transform: scale3d(1, 1, 1);
+        }
+    
+        30% {
+            transform: scale3d(1.25, 0.75, 1);
+        }
+    
+        40% {
+            transform: scale3d(0.75, 1.25, 1);
+        }
+    
+        50% {
+            transform: scale3d(1.15, 0.85, 1);
+        }
+    
+        65% {
+            transform: scale3d(0.95, 1.05, 1);
+        }
+    
+        75% {
+            transform: scale3d(1.05, 0.95, 1);
+        }
+    
+        100% {
+            transform: scale3d(1, 1, 1);
+        }
+    }
+  
+@keyframes bounceInRight {
+    0% {
+       opacity: 0;
+       transform: translateX(2000px);
+    }
+    60% {
+       opacity: 1;
+       transform: translateX(-30px);
+    }
+    80% {
+       transform: translateX(10px);
+    }
+    100% {
+       transform: translateX(0);
+    }
+ } 
+ #myprofile{
+     height: 80px;
+    position: relative;
+    bottom: 913px;
+    left: 30px;
+    
+    animation: profile infinite 2s;
+    border:  solid black;
+    height: fit-content;
+    width: fit-content ;
+    background: rgb(72,202,255);
+background: linear-gradient(90deg, rgba(72,202,255,1) 0%, rgba(121,203,121,1) 46%, rgba(98,213,212,1) 97%);
+ }
+
+ @keyframes profile {
+    0% {
+      box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+      transform: translatey(0px);
+    }
+    50% {
+      box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+      transform: translatey(-20px);
+    }
+    100% {
+      box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+      transform: translatey(0px);
+    }
+  }
+  *{
+    margin: 0;
+    padding: 0;
+}
+#game{
+    height: 720px;
+    width: 400px;
+    border: 1px solid black;
+    margin: 1rem auto;
+    background:url(./assets/newbg.jpg) ;
+    background-size: contain;
+    overflow: hidden;
+    position: relative;
+    bottom: 50px;
+}
+#bluecar{
+    height: 100px;
+    width: 130px;
+    
+    position: relative;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    animation: move  linear  infinite  ;
+    animation-duration: 1s;
+    
+
+}
+#bluecar img{
+    height: 100px;
+}
+@keyframes move {
+    0%{
+        top: -100px;
+    }
+    100%{
+        top: 800px;
+    }
+    
+}
+#racecar{
+    height: 100px;
+    width: 130px;
+    position: relative;
+    top: 350px;
+    left: 130px;
+    text-align: center;
+    transition: 0.05s;
+    
+}
+#racecar img{
+    height: 145px;
+}
+#tank{
+    height: 100px;
+    width: 130px;
+    
+    position: relative;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    animation: move 1s linear  infinite  ;
+    
+
+}
+#tank img{
+    height: 100px;
+}
+
+#result{
+    height: 25vh;
+    width: 40vh;
+    background-color: cornflowerblue;
+    margin:  1rem auto;
+    border-radius: 20px;
+    font-size: 1em;
+    text-align: center;
+    color: rgb(35, 26, 26);
+    display:none ;
+    font-family: 'Fredoka One', cursive;
+    position: relative;
+    top: 200px;
+}
+#score{
+    font-size: 2.2rem;
+    color: rgb(200, 20, 20);
+}
+#btn{
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: none;
+    background-color: black;
+    color: cyan;
+    font-size: 25px;
+    font-family: 'Fredoka One', cursive;
+    margin-top: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+#buttonplay:hover{
+    letter-spacing: 0.18em;
+    
+    background: var(--clr);
+    color: rgb(255, 0, 0);
+    box-shadow: 0 0 35px var(--clr);
+
+}
+   
+
+
+body{
+    overflow: hidden;
+    background: #000000; 
+    animation: color 9s infinite linear;
+    
+}
+@keyframes color {
+    0%   { background: #33CCCC; }
+    10%  { background: rgb(233, 87, 87);}
+    20%  { background: #33CC36; }
+    30%  { background: pink;}
+    40%  { background: #B8CC33; }
+    50%  { background: plum;}
+    60%  { background: #FCCA00; }
+    70%  { background: peru;}
+    80%  { background: #33CC36; }
+    90%  { background: rgb(184, 142, 142);}
+    100% { background: #33CCCC; }
+}
+
+#instructions{
+   
+    border: solid black;
+    border-width: 5px;
+    
+    font-family: 'Fredoka One', cursive;
+    background-color: #e8ff16;
+    font-size: 20px;
+    display: none;
+    color: rgb(0, 0, 0);
+}
+hr{
+    border:  solid black 1px;
+    
+}
+#instructionsbutton{
+    height: 145px;
+    position: relative;
+    bottom: 98vh;
+    margin-left: 43.5%;
+    border: solid black 2px;
+    background-color: yellow;
+    width: max-content;
+    height: fit-content;
+    font-family: 'Fredoka One', cursive;
+    border-radius: 10%;
+    font-size: 30px;
+}
+
+.index{
+    cursor: url('https://cdn.custom-cursor.com/db/14263/32/supercars-mercedes-benz-g-500-pointer.png') 16 16, crosshair;
+}
+
+#instructions::before {
+    content: '';
+    display: inline-block;
+    width: 1.6em;
+    opacity: 0;
+    transition: opacity 200ms;
+}
+
+#instructions:hover {
+    transform: none;
+    color: rgb(255, 0, 0);
+    text-shadow: 0 0 1px #000000, 0 0 15px #000000, 0 0 30px #000000, 0 0 80px #000000;
+}
+
+#instructions:hover::before {
+    opacity: 1;
+    color: rgb(244, 0, 0);
+    text-shadow: 0 0 1px #000000, 0 0 15px #000000, 0 0 30px #000000, 0 0 80px #040707;
+}
+#instructions {
+    transform: translateX(-0.75em);
+    transition: transform 200ms;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Fredoka One', cursive;
+    color: #222;
+    font-weight: 600;
+    transition: 0.3s;
+}
+#responsive{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+#imgcar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Fredoka One', cursive;
+    font-size: 25px;
+}
+
+#imgcar img{
+    width: 60vh;
+    animation: bounceInRight 2s ease;
+}
+
+.index {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#allfuncdiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 150px;
+}
+#buttonplay{
+    font-family: 'Fredoka One', cursive;
+   
+   text-align: center;
+    
+    border: solid rgb(255, 232, 55);
+    border-radius: 5%;
+    width: 32vh;
+    
+    color: yellow;
+  background-color: rgb(7, 8, 8);
+}
+#buttoninstructions{
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    display: flex;
+    justify-content: center;
+    font-size:1em;
+    
+}
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: rgb(255, 242, 0);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    color: red;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+#boxname{
+       
+    border: solid rgb(0, 0, 0);
+    width: fit-content;
+    font-family: 'Fredoka One', cursive;
+    background-color: yellow;
+    box-shadow: #222 5px 10px 15px;
+}
+#imgcar h1{
+       
+    animation: zoomin 3s ease;
+}
+#instructionmanual{
+    border: solid black;
+    border-width: 5px;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    font-family: 'Fredoka One', cursive;
+    background-color: #e8ff16;
+    font-size: 20px;
+    display: none;
+    color: rgb(0, 0, 0);
+}
+#closeins{
+    border: solid rgb(255, 4, 4) 2px;
+    font-family: 'Fredoka One', cursive;
+    background-color: black;
+    color: yellow;
+    height: 5vh;
+    width: 100%;
+    font-size: 1.2em;
+    justify-self:center ;
+}
+#phrases{
+    font-size: x-large;
+   color: #e6ff09;
+}
+
+
+
+@media only screen and (max-width: 600px){
+#playbutton{
+    margin-left: 50px;
+}
+#namebox{
+    margin-left: 86px;
+    bottom: 63vh;
+}
+#instructions{
+    left: 82px;
+}
+#instructionsbutton{
+    margin-left: 102px;
+    bottom: 72vh;
+}
+#myprofile{
+    bottom: 1036px;
+    left: 94px;
+    display: none;
+}
+#bluecar{
+    animation-duration: 1.5s;
+}
+#tank{
+    animation-duration: 1.5s;
+}
+body{
+    overflow: hidden;
+}
+#imgcar img{
+    width: 40vh;
+}
+#imgcar h1{
+    font-size: 1.5em;
+}
+#game{
+    overflow: hidden;
+}
+}
